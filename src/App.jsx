@@ -1,9 +1,15 @@
-function App() {
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Skills from "./components/Skills";
+import Index from "./components/Index";
+const App = () => {
   return (
-    <>
-      <p className="text-3xl font-bold">This is a text</p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />}></Route>
+        <Route path="/Skills" element={<Skills />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
