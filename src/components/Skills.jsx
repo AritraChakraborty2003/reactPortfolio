@@ -36,7 +36,7 @@ const Skills = () => {
         <div className="flex gap-y-5 gap-x-5 flex-wrap justify-center items-center mt-10">
           {data.map((val) => (
             <>
-              <div className="cardHolder p-5 w-40 lg:w-48 bg-[#0c355b] shadow-xl flex flex-col  justify-center text-white font-medium items-center font-sans">
+              <div className="cardHolder p-5 w-40 lg:w-52 bg-[#0c355b] shadow-xl flex flex-col  justify-center text-white font-medium items-center font-sans">
                 <div className="imgHolder h-20 w-20">
                   <img
                     src={val.image}
