@@ -1,4 +1,14 @@
+import Banner from "./Banner";
+import Skills from "./Skills";
+import Header from "./Header";
 const Index = () => {
-  return <p className="text-3xl font-bold">This is index page</p>;
+  return (
+    <>
+      <Header />
+      <Banner />
+
+      <Skills />
+    </>
+  );
 };
 export default Index;
