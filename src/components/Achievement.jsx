@@ -31,7 +31,7 @@ const Achievement = () => {
 
       <div className="flex justify-center flex-wrap  ">
         <div>
-          <div className=" flex flex-end h-[55vmin] lg:h-[47vmin] w-[90vmin] 2xl:h-[80vmin] lg:w-[60vmin] 2xl:w-[80vmin] scroll-pr-72 lg:mt-20">
+          <div className=" flex flex-end h-[55vmin] lg:h-[47vmin] w-[90vmin] 2xl:h-[60vmin] lg:w-[60vmin] 2xl:w-[80vmin] scroll-pr-72 lg:mt-20">
             <img
               src="./images/winner1.png"
               className="max-h-full max-w-full object-contain"
@@ -39,9 +39,9 @@ const Achievement = () => {
           </div>
         </div>
 
-        <ul className="flex flex-col ml-[3vmin] w-[79vmin] 2xl:w-[100vmin] text-[4vmin] lg:text-[2.65vmin]  ">
+        <ul className="flex flex-col ml-[3vmin] w-[79vmin] 2xl:w-[90vmin] text-[4vmin] lg:text-[2.65vmin]  ">
           {data.map((val) => (
-            <li className="text-[4.45vmin]  pl-1 pr-1 lg:text-[2.65vmin] font-poppins mt-3 pb-3">
+            <li className="text-[4.45vmin]  pl-1 pr-1 lg:text-[2.65vmin] font-poppins mt-3 pb-3 p-2">
               {cnt++}. Won <b>{val.rank}</b> position in <b>{val.name}</b> -{" "}
               <a
                 href={val.certificateLink}

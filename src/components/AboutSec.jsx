@@ -33,7 +33,7 @@ const AboutSec = () => {
           {data.map((val) => (
             <>
               <div className="leftPart p-5 w-[100vw] lg:w-[40vw] flex justify-center lg:items-center ">
-                <div className="leftPart h-[60vmin] w-[80vmin]  lg:h-[50vmin]  lg:w-[90vmin] flex justify-center items-center ">
+                <div className="leftPart h-[65vmin] w-[85vmin]  lg:h-[54vmin]  lg:w-[95vmin] flex justify-center items-center ">
                   <img
                     src={val.image}
                     className="max-w-full max-h-full object-contain"
