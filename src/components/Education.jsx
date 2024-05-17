@@ -28,7 +28,7 @@ const Education = () => {
           My <span className="text-supportBlue">Education</span>
         </p>
       </div>
-      <div className="cardHolder flex flex-col justify-center items-center gap-y-5">
+      <div className="cardHolder flex flex-col justify-center items-center gap-y-8">
         {data.map(
           (val) =>
             (val.instname === "IIMT College Of Engineering" && (
@@ -37,17 +37,17 @@ const Education = () => {
                   <img src={val.image} className="max-w-full max-h-full" />
                 </div>
 
-                <div className="rightPart flex flex-col md:mt-5 font-poppins">
-                  <p className="text-md md:text-2xl lg:text-3xl font-bold pb-2">
+                <div className="rightPart flex flex-col md:mt-3 font-poppins ml-2">
+                  <p className="text-[5vmin] md:text-[2.75vmin] lg:text-[4.5vmin] font-bold pb-2">
                     {val.dname}
                   </p>
                   <p className="mt-1 text-sm md:text-xl lg:text-2xl font-medium pb-2">
                     {val.instname} || {val.board}
                   </p>
-                  <p className="text-sm md:text-xl lg:text-sm font-medium pb-2">
+                  <p className="text-sm md:text-xl lg:text-[2vmin] font-medium pb-2">
                     {val.date}
                   </p>
-                  <p className="mt-1  text-sm md:text-lg lg:text-lg font-bold pb-2 text-darkBlue">
+                  <p className="mt-1  text-sm md:text-lg lg:text-[2.15vmin]  font-bold pb-2 text-darkBlue">
                     <span className="text-black">Marks:</span> {val.marks}{" "}
                   </p>
                 </div>
@@ -57,17 +57,17 @@ const Education = () => {
                 <div className="imgBox h-[20vmin] w-[35vmin] lg:h-[30vmin] lg:w-[60vmin] bg-white flex justify-center items-center ml-2">
                   <img src={val.image} className="max-w-full max-h-full" />
                 </div>
-                <div className="rightPart flex flex-col md:mt-5">
-                  <p className="text-md md:text-2xl lg:text-3xl font-bold pb-2">
+                <div className="rightPart flex flex-col md:mt-5  ml-[2vmin] lg:ml-[-3vmin]">
+                  <p className="text-[5vmin] md:text-[2.75vmin] lg:text-[4.5vmin] font-bold pb-1">
                     {val.dname}
                   </p>
                   <p className="lg:mt-1 text-sm md:text-xl lg:text-2xl font-medium pb-2">
                     {val.instname} || {val.board}
                   </p>
-                  <p className=" text-sm md:text-xl lg:text-sm font-medium pb-2">
+                  <p className=" text-sm md:text-xl lg:text-[2vmin] font-medium pb-2">
                     {val.date}
                   </p>
-                  <p className="lg:mt-1 text-sm md:text-lg lg:text-lg font-bold pb-2 text-darkBlue">
+                  <p className="lg:mt-1 text-sm md:text-lg lg:text-[2.15vmin]  font-bold pb-2 text-darkBlue">
                     <span className="text-black ">Marks:</span> {val.marks}{" "}
                   </p>
                 </div>
