@@ -16,7 +16,10 @@ const Skills = () => {
   console.log(data);
   return (
     <>
-      <div className="SkillHolder w-12/12 font-poppins bg-supportBlue p-5 flex flex-col justify-center items-center mt-10">
+      <div
+        id="skills"
+        className="SkillHolder w-12/12 font-poppins bg-supportBlue p-5 flex flex-col justify-center items-center"
+      >
         <div>
           <div className="flex flex-col lg:flex-row lg:gap-x-5">
             <div className="h-20 w-20 mt-[-2vmin] hidden lg:block">

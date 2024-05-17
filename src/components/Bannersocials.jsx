@@ -19,7 +19,7 @@ const Bannersocials = () => {
       {(screen.width <= 500 && (
         <div className="socialHolder flex gap-x-6">
           {data.map((val) => (
-            <a href={val.link}>
+            <a href={val.link} target="_blank">
               <img src={val.icon} height={85} width={85}></img>
             </a>
           ))}
@@ -28,7 +28,7 @@ const Bannersocials = () => {
         (screen.width > 500 && screen.width <= 1700 && (
           <div className="socialHolder flex gap-x-9">
             {data.map((val) => (
-              <a href={val.link}>
+              <a href={val.link} target="_blank">
                 <img src={val.icon} height={50} width={50}></img>
               </a>
             ))}
@@ -36,7 +36,7 @@ const Bannersocials = () => {
         )) || (
           <div className="socialHolder flex gap-x-10">
             {data.map((val) => (
-              <a href={val.link}>
+              <a href={val.link} target="_blank">
                 <img src={val.icon} height={75} width={75}></img>
               </a>
             ))}

@@ -101,7 +101,7 @@ const Banner = () => {
                     Chakraborty
                   </span>
                 </p>
-                <p className="mt-5 text-3xl lg:text-4xl font-oxygen font-medium pb-2">
+                <p className="mt-5 text-3xl lg:text-5xl font-oxygen font-medium pb-2">
                   I like{" "}
                   <span style={{ color: "yellow", fontWeight: "bold" }}>
                     {" "}
@@ -126,8 +126,8 @@ const Banner = () => {
 
         {(screen.width <= 1700 && (
           <div className="flex  lg:items-center rightPart w-[100vw] lg:w-[45vw] mt-10 lg:mt-0 justify-center lg:justify-start">
-            <div className="flex ml-[3vmin] 2xl:ml-[10vmin] justify-center items-center imgHolder h-[68vmin] w-[68vmin] rounded-ext bg-mustardyellow">
-              <div className="imgHolder h-[60vmin] w-[60vmin]">
+            <div className="flex lg:mt-[-5vmin] ml-[3vmin] 2xl:ml-[5vmin] justify-center items-center imgHolder h-[68vmin] w-[68vmin] rounded-ext bg-mustardyellow">
+              <div className="imgHolder h-[67vmin] w-[67vmin] mt-[-2vmin]">
                 <img
                   src="./images/cartoonFace.png"
                   className="max-w-full max-h-full object-contain"

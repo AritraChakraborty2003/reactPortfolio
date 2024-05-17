@@ -16,12 +16,16 @@ const Header = () => {
         </div>
         {(screen.width <= 1700 && (
           <div className="supportArea hidden lg:block w-[31%] "></div>
-        )) || <div className="supportArea hidden lg:block w-[45%] "></div>}
+        )) || <div className="supportArea hidden lg:block w-[40%] "></div>}
         {(screen.width <= 1700 && (
-          <div className="supportArea hidden lg:block w-[50%] ">
-            <div className="sectionHolder font-medium text-lg flex gap-x-6 items-center h-[100%]">
+          <div className="supportArea hidden lg:block w-[52%] ">
+            <div className="sectionHolder font-medium text-md 2xl:text-lg flex gap-x-6 items-center h-[100%] font-poppins">
               <p>About-Me</p>
-              <p>Skills</p>
+              <p>
+                <a href="#skills" className="text-black decoration-none">
+                  Skills
+                </a>
+              </p>
               <p>Projects</p>
               <p>Education</p>
               <p>Achievements</p>

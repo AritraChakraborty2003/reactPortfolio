@@ -29,9 +29,9 @@ const Particle = () => {
               value: "#0d47a1",
             },
             image: "",
-            position: "",
-            repeat: "",
-            size: "",
+            position: "50% 50%",
+            repeat: "no-repeat",
+            size: "cover",
             opacity: 1,
           },
           backgroundMask: {
@@ -69,10 +69,10 @@ const Particle = () => {
               },
               onHover: {
                 enable: true,
-                mode: "grab",
+                mode: "repulse",
                 parallax: {
-                  enable: true,
-                  force: 60,
+                  enable: false,
+                  force: 2,
                   smooth: 10,
                 },
               },
@@ -99,11 +99,9 @@ const Particle = () => {
                 distance: 200,
               },
               bubble: {
-                distance: 400,
-                duration: 2,
+                distance: 200,
+                duration: 0.4,
                 mix: false,
-                opacity: 0.8,
-                size: 40,
                 divs: {
                   distance: 200,
                   duration: 0.4,
@@ -119,7 +117,7 @@ const Particle = () => {
                 radius: 60,
               },
               grab: {
-                distance: 400,
+                distance: 100,
                 links: {
                   blink: false,
                   consent: false,
@@ -309,14 +307,14 @@ const Particle = () => {
             number: {
               density: {
                 enable: true,
-                width: 1920,
-                height: 1080,
+                width: 800,
+                height: 1000,
               },
               limit: {
                 mode: "delete",
                 value: 0,
               },
-              value: 100,
+              value: 80,
             },
             opacity: {
               value: {
@@ -326,7 +324,7 @@ const Particle = () => {
               animation: {
                 count: 0,
                 enable: true,
-                speed: 3,
+                speed: 1,
                 decay: 0,
                 delay: 0,
                 sync: false,
@@ -350,18 +348,35 @@ const Particle = () => {
             shape: {
               close: true,
               fill: true,
-              options: {},
-              type: "circle",
+              options: {
+                char: [
+                  {
+                    fill: true,
+
+                    style: "",
+                    value: ["."],
+                    weight: "400",
+                  },
+                  {
+                    fill: true,
+
+                    style: "",
+                    value: ["."],
+                    weight: "900",
+                  },
+                ],
+              },
+              type: "char",
+            },
+            style: {
+              height: "100%",
             },
             size: {
-              value: {
-                min: 1,
-                max: 10,
-              },
+              value: 16,
               animation: {
                 count: 0,
-                enable: true,
-                speed: 20,
+                enable: false,
+                speed: 5,
                 decay: 0,
                 delay: 0,
                 sync: false,
@@ -371,10 +386,42 @@ const Particle = () => {
               },
             },
             stroke: {
-              width: 0,
+              width: 1,
+              color: {
+                value: "#ffffff",
+                animation: {
+                  h: {
+                    count: 0,
+                    enable: false,
+                    speed: 1,
+                    decay: 0,
+                    delay: 0,
+                    sync: true,
+                    offset: 0,
+                  },
+                  s: {
+                    count: 0,
+                    enable: false,
+                    speed: 1,
+                    decay: 0,
+                    delay: 0,
+                    sync: true,
+                    offset: 0,
+                  },
+                  l: {
+                    count: 0,
+                    enable: false,
+                    speed: 1,
+                    decay: 0,
+                    delay: 0,
+                    sync: true,
+                    offset: 0,
+                  },
+                },
+              },
             },
             zIndex: {
-              value: 0,
+              value: -1,
               opacityRate: 1,
               sizeRate: 1,
               velocityRate: 1,
@@ -492,7 +539,7 @@ const Particle = () => {
               shadow: {
                 blur: 5,
                 color: {
-                  value: "#000",
+                  value: "lime",
                 },
                 enable: false,
               },
@@ -501,7 +548,7 @@ const Particle = () => {
                 frequency: 1,
               },
               width: 1,
-              warp: true,
+              warp: false,
             },
             repulse: {
               value: 0,
@@ -516,12 +563,10 @@ const Particle = () => {
           pauseOnOutsideViewport: true,
           responsive: [],
           smooth: false,
-          style: {
-            height: "100%",
-          },
+          style: {},
           themes: [],
           zLayers: 100,
-          name: "Parallax",
+          name: "Font Awesome",
           motion: {
             disable: false,
             reduce: {
