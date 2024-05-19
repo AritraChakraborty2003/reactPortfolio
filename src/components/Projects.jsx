@@ -23,7 +23,7 @@ const Projects = () => {
   const [Hidden5, setHidden5] = useState(false);
   const [Hidden6, setHidden6] = useState(false);
   return (
-    <div className="aboutArea w-[100vw] bg-supportBlue pb-4">
+    <div id="projects" className="aboutArea w-[100vw] bg-supportBlue pb-4">
       <div className="header p-5   flex  gap-x-2 justify-center h-27">
         <div className="imgHolder p-2  w-20 lg:w-24 flex justify-center items-center h:20 lg:h-12/12 mt-[-1vmin]">
           <img
@@ -36,8 +36,8 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="projectsHolder w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-2">
-        {data.map((val, idx) => (
+      <div className="projectsHolder w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-5">
+        {data.slice(0, 6).map((val, idx) => (
           <div
             className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"
             style={{

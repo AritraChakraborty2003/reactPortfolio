@@ -16,7 +16,7 @@ const AboutSec = () => {
   console.log(data);
   return (
     <>
-      <div className="aboutArea w-[100vw] bg-darkwhite pb-10 pt-5">
+      <div id="about" className="aboutArea w-[100vw] bg-darkwhite pb-10 pt-5">
         <div className="header p-5 pt-2   flex  gap-x-3 justify-center h-27">
           <div className="imgHolder p-2  w-16 flex justify-center items-center h-12/12">
             <img

@@ -16,7 +16,7 @@ const Education = () => {
   }, []);
   console.log(data);
   return (
-    <div className="aboutArea w-[100vw] bg-darkwhite pb-6">
+    <div id="education" className="aboutArea w-[100vw] bg-darkwhite pb-6">
       <div className="header p-5   flex  gap-x-3 justify-center h-27">
         <div className="imgHolder p-2  w-16 flex justify-center items-center h-12/12">
           <img

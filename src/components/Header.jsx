@@ -20,27 +20,77 @@ const Header = () => {
         {(screen.width <= 1700 && (
           <div className="supportArea hidden lg:block w-[52%] ">
             <div className="sectionHolder font-medium text-md 2xl:text-lg flex gap-x-6 items-center h-[100%] font-poppins">
-              <p>About-Me</p>
+              <p>
+                <a href="#about" className="text-black decoration-none">
+                  About me
+                </a>
+              </p>
               <p>
                 <a href="#skills" className="text-black decoration-none">
                   Skills
                 </a>
               </p>
-              <p>Projects</p>
-              <p>Education</p>
-              <p>Achievements</p>
-              <p>Experience</p>
+              <p>
+                <a href="#projects" className="text-black decoration-none">
+                  Projects
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a href="#education" className="text-black decoration-none">
+                  Education
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a href="#achievements" className="text-black decoration-none">
+                  Achievements
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a href="#experience" className="text-black decoration-none">
+                  Experience
+                </a>
+              </p>
             </div>
           </div>
         )) || (
           <div className="supportArea hidden lg:block w-[44%] ">
             <div className="sectionHolder font-medium text-lg flex gap-x-6 items-center h-[100%]">
-              <p>About-Me</p>
-              <p>Skills</p>
-              <p>Projects</p>
-              <p>Education</p>
-              <p>Achievements</p>
-              <p>Experience</p>
+              <p>
+                <a href="#about" className="text-black decoration-none">
+                  About me
+                </a>
+              </p>
+              <p>
+                <a href="#skills" className="text-black decoration-none">
+                  Skills
+                </a>
+              </p>
+              <p>
+                <a href="#projects" className="text-black decoration-none">
+                  Projects
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a href="#education" className="text-black decoration-none">
+                  Education
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a href="#achievements" className="text-black decoration-none">
+                  Achievements
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a href="#experience" className="text-black decoration-none">
+                  Experience
+                </a>
+              </p>
             </div>
           </div>
         )}
@@ -65,12 +115,63 @@ const Header = () => {
         <div className="hamBox block lg:hidden">
           <div className="flex flex-col hamsection w-[100vw]  bg-mustardyellow p-3  mt-[-1vmin]">
             <ul>
-              <li className="mt-3 font-poppins font-medium">About-me</li>
-              <li className="mt-3 font-poppins font-medium">Skills</li>
-              <li className="mt-3 font-poppins font-medium">Projects</li>
-              <li className="mt-3 font-poppins font-medium">Education</li>
-              <li className="mt-3 font-poppins font-medium">Achievements</li>
-              <li className="mt-3 font-poppins font-medium">Experience</li>
+              <p>
+                <a
+                  href="#about"
+                  className="text-black decoration-none"
+                  onClick={() => setHamsection(false)}
+                >
+                  About me
+                </a>
+              </p>
+              <p>
+                <a
+                  href="#skills"
+                  className="text-black decoration-none"
+                  onClick={() => setHamsection(false)}
+                >
+                  Skills
+                </a>
+              </p>
+              <p>
+                <a
+                  href="#projects"
+                  className="text-black decoration-none"
+                  onClick={() => setHamsection(false)}
+                >
+                  Projects
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a
+                  href="#education"
+                  className="text-black decoration-none"
+                  onClick={() => setHamsection(false)}
+                >
+                  Education
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a
+                  href="#achievements"
+                  className="text-black decoration-none"
+                  onClick={() => setHamsection(false)}
+                >
+                  Achievements
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a
+                  href="#experience"
+                  className="text-black decoration-none"
+                  onClick={() => setHamsection(false)}
+                >
+                  Experience
+                </a>
+              </p>
             </ul>
           </div>
         </div>

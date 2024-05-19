@@ -3,7 +3,7 @@ import TimeLine from "./TimeLine";
 const Experience = () => {
   return (
     <>
-      <div className="aboutArea w-[100vw] bg-supportBlue p-5">
+      <div id="experience" className="aboutArea w-[100vw] bg-supportBlue p-5">
         <div className="header p-5   flex  gap-x-0 lg:gap-x-3 justify-center h-27">
           <div className="imgHolder p-2  w-28 lg:w-20 flex justify-center items-center h-12/12">
             <img

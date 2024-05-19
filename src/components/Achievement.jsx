@@ -16,7 +16,7 @@ const Achievement = () => {
   }, []);
   console.log(data);
   return (
-    <div className="aboutArea w-[100vw] bg-darkwhite p-3">
+    <div id="achievements" className="aboutArea w-[100vw] bg-darkwhite p-3">
       <div className="header   flex  gap-x-3 justify-center">
         <div className="imgHolder w-16 flex justify-center items-center h-12/12">
           <img
