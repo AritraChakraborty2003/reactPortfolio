@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+
 import axios from "axios";
 const Projects = () => {
-  const navigate = useNavigate();
   const [data, setData] = useState([]);
   var cnt = 0;
   useEffect(() => {
@@ -295,11 +296,8 @@ const Projects = () => {
             document.getElementById("btn").style.color = "black";
             document.getElementById("btn").style.fontWeight = "normal";
           }}
-          onClick={() => {
-            navigate("/moreprojects", { state: data });
-          }}
         >
-          More Projects
+          <Link to="/moreprojects">More Projects</Link>
         </button>
       </div>
     </div>

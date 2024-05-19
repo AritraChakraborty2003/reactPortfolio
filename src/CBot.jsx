@@ -35,7 +35,7 @@ const CBot = () => {
     {
       id: "yes",
       message:
-        "Okay thanks for your concern please mail me at aritra.chakraborty203@gmail.com.I will be happy to hear you ,😇",
+        "Okay thanks for your concern please mail me at my email given.I will be happy to hear you ,😇",
       trigger: "opt2",
     },
     {

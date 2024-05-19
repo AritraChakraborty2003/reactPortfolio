@@ -2,16 +2,28 @@
 /* eslint-disable react/jsx-key */
 import Footer from "./Footer";
 import Header from "./Header";
-import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
-const Moreprojects = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Outlet, Link } from "react-router-dom";
 
+import { Navigate } from "react-router-dom";
+
+const Moreprojects = () => {
   const [filteredProduct, setFilteredProduct] = useState([]);
   const [filterVal, setFilterVal] = useState("");
-  const data = location.state;
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://codemap.co.in/projectsAPI.php")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  console.log(data);
+
   function handleChange(x) {
     setFilterVal(x);
     const dataFilter = data.filter((val) => val.techstack === x);
@@ -23,11 +35,8 @@ const Moreprojects = () => {
       <Header />
       <div className="pb-5 pt-5 bg-supportBlue ">
         <div>
-          <button
-            className="bg-mustardyellow text-black p-2 ml-2"
-            onClick={() => navigate("/")}
-          >
-            Back
+          <button className="bg-mustardyellow text-black p-2 ml-2">
+            <Link to="/">Back</Link>
           </button>
         </div>
         <div className="mt-3 boxHolder pb-3 flex-wrap pt-1 w-screen text-white flex justify-center items-center gap-x-4 gap-y-2">
