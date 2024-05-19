@@ -1,6 +1,7 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Skills from "./components/Skills";
 import Index from "./components/Index";
+import Moreprojects from "./components/Moreprojects";
 import Banner from "./components/Banner";
 import AboutSec from "./components/AboutSec";
 import Bannersocials from "./components/Bannersocials";
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/Experience" element={<Experience />} />
         <Route path="/Footer" element={<Footer />} />
         <Route path="/TimeLine" element={<TimeLine />}></Route>{" "}
+        <Route path="/moreprojects" element={<Moreprojects />}></Route>{" "}
       </Routes>
     </BrowserRouter>
   );

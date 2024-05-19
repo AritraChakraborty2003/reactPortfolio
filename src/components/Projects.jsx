@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const Projects = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   var cnt = 0;
   useEffect(() => {
@@ -36,7 +38,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="projectsHolder w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-5">
+      <div className="projectsHolder w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-10">
         {data.slice(0, 6).map((val, idx) => (
           <div
             className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"
@@ -292,6 +294,9 @@ const Projects = () => {
             document.getElementById("btn").style.backgroundColor = "white";
             document.getElementById("btn").style.color = "black";
             document.getElementById("btn").style.fontWeight = "normal";
+          }}
+          onClick={() => {
+            navigate("/moreprojects", { state: data });
           }}
         >
           More Projects

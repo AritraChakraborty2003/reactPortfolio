@@ -42,7 +42,7 @@ const TimeLine = () => {
               <h4 className="vertical-timeline-element-subtitle font-normal font-poppins">
                 {val.etype} || {val.etime}
               </h4>
-              <p className="vertical-timeline-element-subtitle font-normal">
+              <p className="vertical-timeline-element-subtitle font-normal font-poppins">
                 {val.ecategory}
               </p>
             </>
