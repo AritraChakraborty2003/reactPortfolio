@@ -41,39 +41,39 @@ const AboutSec = () => {
                 </div>
               </div>
               <div className="rightPart p-5 w-[100vw] lg:w-[50vw] flex flex-col justify-start mt-5  ">
-                <p className="text-[4vmin] lg:text-[2.45vmin] font-medium">
+                <p className="text-[4vmin] md:text-[2.45vmin] font-medium">
                   Name:{" "}
-                  <span className="text-[4vmin] lg:text-[2.45vmin] font-bold">
+                  <span className="text-[4vmin] md:text-[2.45vmin] font-bold">
                     {val.name}
                   </span>
                 </p>
-                <p className="text-[4vmin] lg:text-[2.45vmin] mt-1 text-supportBlue font-bold font-poppins">
+                <p className="text-[4vmin] md:text-[2.45vmin] mt-1 text-supportBlue font-bold font-poppins">
                   {val.desig}
                 </p>
-                <p className="mt-2 text-[4vmin] lg:text-[2.45vmin] font-normal ">
+                <p className="mt-2 text-[4vmin] md:text-[2.45vmin] font-normal ">
                   {val.descr}
                 </p>
 
-                <p className="text-[4vmin] lg:text-[2.25vmin] text-supportBlue font-bold mt-3 font-poppins">
+                <p className="text-[4vmin] md:text-[2.25vmin] text-supportBlue font-bold mt-3 font-poppins">
                   Location:&nbsp;
-                  <span className="text-[4vmin] lg:text-[2.25vmin] text-black font-normal font-poppins">
+                  <span className="text-[4vmin] md:text-[2.25vmin] text-black font-normal font-poppins">
                     {val.location}
                   </span>
                 </p>
                 <p>
-                  <span className="text-[4vmin] lg:text-[2.25vmin] mt-2 text-supportBlue font-bold font-poppins">
+                  <span className="text-[4vmin] md:text-[2.25vmin] mt-2 text-supportBlue font-bold font-poppins">
                     Email:&nbsp;
                   </span>
-                  <span className="text-[4vmin] lg:text-[2.25vmin] mt-10 text-black font-normal font-poppins">
+                  <span className="text-[4vmin] md:text-[2.25vmin] mt-10 text-black font-normal font-poppins">
                     {" "}
                     {val.email}
                   </span>
                 </p>
                 <p>
-                  <span className="text-[4vmin] lg:text-[2.25vmin]  text-supportBlue font-bold font-poppins">
+                  <span className="text-[4vmin] md:text-[2.25vmin]  text-supportBlue font-bold font-poppins">
                     Phone:&nbsp;
                   </span>
-                  <span className="text-[4vmin] lg:text-[2.25vmin]  mt-10 text-black font-normal font-poppins">
+                  <span className="text-[4vmin] md:text-[2.25vmin]  mt-10 text-black font-normal font-poppins">
                     {" "}
                     {val.phone}
                   </span>

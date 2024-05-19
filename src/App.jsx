@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Achievement from "./components/Achievement";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
+import TimeLine from "./components/TimeLine";
 const App = () => {
   return (
     <BrowserRouter>
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/Achievements" element={<Achievement />} />
         <Route path="/Experience" element={<Experience />} />
         <Route path="/Footer" element={<Footer />} />
+        <Route path="/TimeLine" element={<TimeLine />}></Route>{" "}
       </Routes>
     </BrowserRouter>
   );

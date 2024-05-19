@@ -127,7 +127,7 @@ const Banner = () => {
         {(screen.width <= 1700 && (
           <div className="flex  lg:items-center rightPart w-[100vw] lg:w-[45vw] mt-10 lg:mt-0 justify-center lg:justify-start">
             <div className="flex lg:mt-[-5vmin] ml-[3vmin] 2xl:ml-[5vmin] justify-center items-center imgHolder h-[68vmin] w-[68vmin] rounded-ext bg-mustardyellow">
-              <div className="imgHolder h-[67vmin] w-[67vmin] mt-[-2vmin]">
+              <div className="imgHolder h-[68vmin] w-[68vmin] mt-[-2vmin] flex justify-center items-center">
                 <img
                   src="./images/cartoonFace.png"
                   className="max-w-full max-h-full object-contain"

@@ -24,7 +24,7 @@ const Achievement = () => {
             className="max-w-full max-h-full object-contain"
           ></img>
         </div>
-        <p className="text-center text-3xl lg:text-6xl font-poppins font-bold pb-2 overflow-hidden ">
+        <p className="text-center text-3xl md:text-6xl font-poppins font-bold pb-2 overflow-hidden ">
           <span className="text-supportBlue ">Achievements</span>
         </p>
       </div>
@@ -41,7 +41,7 @@ const Achievement = () => {
 
         <ul className="flex flex-col ml-[3vmin] w-[79vmin] 2xl:w-[90vmin] text-[4vmin] lg:text-[2.65vmin]  ">
           {data.map((val) => (
-            <li className="text-[4.45vmin]  pl-1 pr-1 lg:text-[2.65vmin] font-poppins mt-3 pb-3 p-2">
+            <li className="text-[4.45vmin]  pl-1 pr-1 md:text-[2.65vmin] font-poppins mt-3 pb-3 p-2">
               {cnt++}. Won <b>{val.rank}</b> position in <b>{val.name}</b> -{" "}
               <a
                 href={val.certificateLink}
@@ -50,7 +50,7 @@ const Achievement = () => {
               >
                 <u>Certificate Link</u>
               </a>
-              <p className="text-[3.65vmin] pl-1 pr-1 lg:text-[2.65vmin]">
+              <p className="text-[3.65vmin] pl-1 pr-1 md:text-[2.65vmin]">
                 <b>Description:</b> {val.descr}
               </p>
             </li>
