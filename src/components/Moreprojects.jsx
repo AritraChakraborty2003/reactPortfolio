@@ -8,10 +8,16 @@ import { useState } from "react";
 const Moreprojects = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [Hidden1, setHidden1] = useState(false);
 
+  const [filteredProduct, setFilteredProduct] = useState([]);
+  const [filterVal, setFilterVal] = useState("");
   const data = location.state;
-  console.log(data);
+  function handleChange(x) {
+    setFilterVal(x);
+    const dataFilter = data.filter((val) => val.techstack === x);
+    setFilteredProduct(dataFilter);
+  }
+
   return (
     <>
       <Header />
@@ -38,6 +44,9 @@ const Moreprojects = () => {
               document.getElementById("btn").style.color = "white";
               document.getElementById("btn").style.fontWeight = "normal";
             }}
+            onClick={() => {
+              handleChange("AI/ML");
+            }}
           >
             <p>AI/ML</p>
           </div>
@@ -52,6 +61,9 @@ const Moreprojects = () => {
               document.getElementById("btn1").style.backgroundColor = "#0d47a1";
               document.getElementById("btn1").style.color = "white";
               document.getElementById("btn1").style.fontWeight = "normal";
+            }}
+            onClick={() => {
+              handleChange("Android");
             }}
             className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
           >
@@ -68,6 +80,9 @@ const Moreprojects = () => {
               document.getElementById("btn2").style.backgroundColor = "#0d47a1";
               document.getElementById("btn2").style.color = "white";
               document.getElementById("btn2").style.fontWeight = "normal";
+            }}
+            onClick={() => {
+              handleChange("Django");
             }}
             className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
           >
@@ -86,6 +101,9 @@ const Moreprojects = () => {
               document.getElementById("btn3").style.fontWeight = "normal";
             }}
             className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
+            onClick={() => {
+              handleChange("Lamp Stack");
+            }}
           >
             <p>Lamp Stack</p>
           </div>
@@ -102,6 +120,9 @@ const Moreprojects = () => {
               document.getElementById("btn4").style.fontWeight = "normal";
             }}
             className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
+            onClick={() => {
+              handleChange("MERN Stack");
+            }}
           >
             <p>MERN Stack</p>
           </div>
@@ -118,6 +139,9 @@ const Moreprojects = () => {
               document.getElementById("btn5").style.fontWeight = "normal";
             }}
             className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
+            onClick={() => {
+              handleChange("react.js");
+            }}
           >
             <p>react.js</p>
           </div>
@@ -138,6 +162,9 @@ const Moreprojects = () => {
                   document.getElementById("btn6").style.fontWeight = "normal";
                 }}
                 className="boxHolder h-10 border-white border-2  pl-2 pr-2 "
+                onClick={() => {
+                  handleChange("react.js+Firebase");
+                }}
               >
                 <p className="mt-1">react.js + Firebase</p>
               </div>
@@ -156,6 +183,9 @@ const Moreprojects = () => {
                   document.getElementById("btn7").style.fontWeight = "normal";
                 }}
                 className="boxHolder h-10 border-white border-2  w-24 md:w-24  flex justify-center items-center"
+                onClick={() => {
+                  handleChange("TS+next.js");
+                }}
               >
                 <p>TS+next.js</p>
               </div>
@@ -174,6 +204,9 @@ const Moreprojects = () => {
                   document.getElementById("btn8").style.fontWeight = "normal";
                 }}
                 className="boxHolder h-10 border-white border-2  w-20 md:w-24 flex justify-center items-center"
+                onClick={() => {
+                  handleChange("Basic Web");
+                }}
               >
                 <p>Basic web</p>
               </div>
@@ -192,6 +225,9 @@ const Moreprojects = () => {
                   document.getElementById("btn9").style.fontWeight = "normal";
                 }}
                 className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
+                onClick={() => {
+                  handleChange("Java Spring");
+                }}
               >
                 <p>Java Spring</p>
               </div>
@@ -210,27 +246,13 @@ const Moreprojects = () => {
                   document.getElementById("btn10").style.fontWeight = "normal";
                 }}
                 className="boxHolder h-10 border-white border-2  p-2 md:w-27 flex justify-center items-center"
+                onClick={() => {
+                  handleChange("UI-Tools");
+                }}
               >
                 UI-Tools
               </div>
-              <div
-                id="btn11"
-                onMouseEnter={() => {
-                  document.getElementById("btn11").style.backgroundColor =
-                    "white";
-                  document.getElementById("btn11").style.color = "black";
-                  document.getElementById("btn11").style.fontWeight = "bold";
-                }}
-                onMouseLeave={() => {
-                  document.getElementById("btn11").style.backgroundColor =
-                    "#0d47a1";
-                  document.getElementById("btn11").style.color = "white";
-                  document.getElementById("btn11").style.fontWeight = "normal";
-                }}
-                className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
-              >
-                <p>Java Spring</p>
-              </div>
+
               <div
                 id="btn12"
                 onMouseEnter={() => {
@@ -246,6 +268,10 @@ const Moreprojects = () => {
                   document.getElementById("btn12").style.fontWeight = "normal";
                 }}
                 className="boxHolder h-10 border-white border-2  p-2 md:w-27 flex justify-center items-center"
+                onClick={() => {
+                  setFilterVal("");
+                  setFilteredProduct([]);
+                }}
               >
                 Remove Filters
               </div>
@@ -268,6 +294,9 @@ const Moreprojects = () => {
                 document.getElementById("btn6").style.fontWeight = "normal";
               }}
               className="boxHolder h-10 border-white border-2  pl-2 pr-2"
+              onClick={() => {
+                handleChange("react.js+Firebase");
+              }}
             >
               <p className="mt-1">react.js + Firebase</p>
             </div>
@@ -285,6 +314,9 @@ const Moreprojects = () => {
                 document.getElementById("btn7").style.fontWeight = "normal";
               }}
               className="boxHolder h-10 border-white border-2  w-24 md:w-24  flex justify-center items-center"
+              onClick={() => {
+                handleChange("TS+next.js");
+              }}
             >
               <p>TS+next.js</p>
             </div>
@@ -302,6 +334,9 @@ const Moreprojects = () => {
                 document.getElementById("btn8").style.fontWeight = "normal";
               }}
               className="boxHolder h-10 border-white border-2  w-20 md:w-24 flex justify-center items-center"
+              onClick={() => {
+                handleChange("Basic Web");
+              }}
             >
               <p>Basic web</p>
             </div>
@@ -319,6 +354,9 @@ const Moreprojects = () => {
                 document.getElementById("btn9").style.fontWeight = "normal";
               }}
               className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
+              onClick={() => {
+                handleChange("Java Spring");
+              }}
             >
               <p>Java Spring</p>
             </div>
@@ -337,27 +375,13 @@ const Moreprojects = () => {
                 document.getElementById("btn10").style.fontWeight = "normal";
               }}
               className="boxHolder pb-2 border-white border-2  p-2  flex justify-center items-center"
+              onClick={() => {
+                handleChange("UI-Tools");
+              }}
             >
               UI-Tools
             </div>
-            <div
-              id="btn11"
-              onMouseEnter={() => {
-                document.getElementById("btn11").style.backgroundColor =
-                  "white";
-                document.getElementById("btn11").style.color = "black";
-                document.getElementById("btn11").style.fontWeight = "bold";
-              }}
-              onMouseLeave={() => {
-                document.getElementById("btn11").style.backgroundColor =
-                  "#0d47a1";
-                document.getElementById("btn11").style.color = "white";
-                document.getElementById("btn11").style.fontWeight = "normal";
-              }}
-              className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
-            >
-              <p>Java Spring</p>
-            </div>
+
             <div
               id="btn12"
               onMouseEnter={() => {
@@ -373,22 +397,27 @@ const Moreprojects = () => {
                 document.getElementById("btn12").style.fontWeight = "normal";
               }}
               className="boxHolder pb-2 border-white border-2  p-2 md:w-27 flex justify-center items-center"
+              onClick={() => {
+                setFilterVal("");
+                setFilteredProduct([]);
+              }}
             >
               Remove Filters
             </div>
           </div>
         </div>
-        <div className="projectsHolder w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-10">
-          {data.map((val, idx) => (
-            <div
-              className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"
-              style={{
-                backgroundImage: `url(${val.pimage})`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-              }}
-              onMouseEnter={() => {
-                document.getElementById(idx).innerHTML = ` 
+        {(filteredProduct.length === 0 && filterVal === "" && (
+          <div className="projectsHolder w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-10">
+            {data.map((val, idx) => (
+              <div
+                className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"
+                style={{
+                  backgroundImage: `url(${val.pimage})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                }}
+                onMouseEnter={() => {
+                  document.getElementById(idx).innerHTML = ` 
                  <p class="text-xl font-normal p-2">${val.pname}</p>
                   <div class=" bg-darkwhite w-full text-black p-2 font-normal lg:text-lg text-sm font-oxygen">
                     <p>${val.pdetails}</p>
@@ -422,20 +451,94 @@ const Moreprojects = () => {
                     </div>
                   </div>
               `;
-              }}
-              onMouseLeave={() => {
-                document.getElementById(
-                  idx
-                ).innerHTML = `<p className="text-xl font-normal p-2">${val.pname}</p>`;
-              }}
-            >
-              <div id={idx} className="bg-black w-screen opacity-85 text-white">
-                <p className="text-xl font-normal p-2">{val.pname}</p>
+                }}
+                onMouseLeave={() => {
+                  document.getElementById(
+                    idx
+                  ).innerHTML = `<p class="text-xl font-normal p-2">${val.pname}</p>`;
+                }}
+              >
+                <div
+                  id={idx}
+                  className="bg-black w-screen opacity-85 text-white"
+                >
+                  <p className="text-xl font-normal p-2">{val.pname}</p>
+                </div>
               </div>
+            ))}
+          </div>
+        )) ||
+          (filteredProduct.length === 0 && filterVal != "" && (
+            <div className="projectsHolder w-screen flex justify-center items-center h-96">
+              <p className="text-3xl text-white font-normal pb-2">
+                0 Results Found
+              </p>
+            </div>
+          )) ||
+          (filteredProduct.length != 0 && filterVal != "" && (
+            <div className="projectsHolder w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-10">
+              {filteredProduct.map((val, idx) => (
+                <div
+                  className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"
+                  style={{
+                    backgroundImage: `url(${val.pimage})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                  onMouseEnter={() => {
+                    document.getElementById(idx).innerHTML = ` 
+                 <p class="text-xl font-normal p-2">${val.pname}</p>
+                  <div class=" bg-darkwhite w-full text-black p-2 font-normal lg:text-lg text-sm font-oxygen">
+                    <p>${val.pdetails}</p>
+                  </div>
+                  <div class="btnHolder bg-darkwhite w-full text-black p-2 font-semibold flex gap-x-12">
+                    <div class="flex gap-x-[1vmin] bg-black p-2 justify-center items-center">
+                      <div class="h-5 w-5">
+                        <img
+                          src="./images/live.png"
+                          class="max-w-full max-h-full object-contain"
+                        ></img>
+                      </div>
+                      <button class=" text-white p-2">
+                        <a href=${val.pLiveLink} target="_blank">
+                          Live Link
+                        </a>
+                      </button>
+                    </div>
+                    <div class="flex gap-x-[1vmin] bg-black pl-2 justify-center items-center">
+                      <div class="h-5 w-5">
+                        <img
+                          src="./images/giticon.png"
+                          class="max-w-full max-h-full object-contain"
+                        ></img>
+                      </div>
+                      <button class=" text-white p-2">
+                        <a href=${val.pgitLink} target="_blank">
+                          Github Link
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+              `;
+                  }}
+                  onMouseLeave={() => {
+                    document.getElementById(
+                      idx
+                    ).innerHTML = `<p class="text-xl font-normal p-2">${val.pname}</p>`;
+                  }}
+                >
+                  <div
+                    id={idx}
+                    className="bg-black w-screen opacity-85 text-white"
+                  >
+                    <p className="text-xl font-normal p-2">{val.pname}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
-        </div>
       </div>
+
       <Footer />
     </>
   );
