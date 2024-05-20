@@ -2,28 +2,16 @@
 /* eslint-disable react/jsx-key */
 import Footer from "./Footer";
 import Header from "./Header";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { Outlet, Link } from "react-router-dom";
-
-import { Navigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 const Moreprojects = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const [filteredProduct, setFilteredProduct] = useState([]);
   const [filterVal, setFilterVal] = useState("");
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://codemap.co.in/projectsAPI.php")
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-  console.log(data);
-
+  const data = location.state;
   function handleChange(x) {
     setFilterVal(x);
     const dataFilter = data.filter((val) => val.techstack === x);
@@ -35,8 +23,11 @@ const Moreprojects = () => {
       <Header />
       <div className="pb-5 pt-5 bg-supportBlue ">
         <div>
-          <button className="bg-mustardyellow text-black p-2 ml-2">
-            <Link to="/">Back</Link>
+          <button
+            className="bg-mustardyellow text-black p-2 ml-2"
+            onClick={() => navigate("/")}
+          >
+            Back
           </button>
         </div>
         <div className="mt-3 boxHolder pb-3 flex-wrap pt-1 w-screen text-white flex justify-center items-center gap-x-4 gap-y-2">
@@ -128,7 +119,7 @@ const Moreprojects = () => {
               document.getElementById("btn4").style.color = "white";
               document.getElementById("btn4").style.fontWeight = "normal";
             }}
-            className="boxHolder h-10 border-white border-2  w-24 md:w-24 flex justify-center items-center"
+            className="boxHolder  border-white border-2   p-2 flex justify-center items-center"
             onClick={() => {
               handleChange("MERN Stack");
             }}
