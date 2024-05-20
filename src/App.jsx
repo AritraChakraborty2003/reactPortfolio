@@ -12,9 +12,11 @@ import Projects from "./components/Projects";
 import Achievement from "./components/Achievement";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
-
+import Achieve2 from "./components/Achieve2";
+import Achieve3 from "./components/Achieve3";
 import TimeLine from "./components/TimeLine";
 import CBot from "./CBot";
+import Achieve1 from "./components/Achieve1";
 const App = () => {
   return (
     <>
@@ -32,6 +34,9 @@ const App = () => {
           <Route path="/Footer" element={<Footer />} />
           <Route path="/TimeLine" element={<TimeLine />}></Route>{" "}
           <Route path="/moreprojects" element={<Moreprojects />}></Route>{" "}
+          <Route path="/Achieve1" element={<Achieve1 />}></Route>{" "}
+          <Route path="/Achieve2" element={<Achieve2 />}></Route>{" "}
+          <Route path="/Achieve3" element={<Achieve3 />}></Route>{" "}
         </Routes>
       </BrowserRouter>
       <CBot />

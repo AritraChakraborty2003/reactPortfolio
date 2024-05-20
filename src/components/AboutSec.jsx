@@ -36,7 +36,7 @@ const AboutSec = () => {
                 <div className="leftPart h-[65vmin] w-[85vmin]  lg:h-[54vmin]  lg:w-[95vmin] flex justify-center items-center ">
                   <img
                     src={val.image}
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-full max-h-full object-contain "
                   />
                 </div>
               </div>
