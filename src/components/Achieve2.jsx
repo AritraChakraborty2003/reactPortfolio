@@ -40,7 +40,7 @@ const Achieve2 = () => {
           </div>
         </div>
       )) ||
-        (data.length == 0 && <p> Loading...</p>)}
+        (data.length == 0 && <p> Loading... 🙏</p>)}
     </div>
   );
 };
