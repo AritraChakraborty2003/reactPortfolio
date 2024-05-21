@@ -112,10 +112,10 @@ const Header = () => {
         </div>
       </div>
       {hamsection && (
-        <div className="hamBox block lg:hidden text-[4.65vmin]">
-          <div className="flex flex-col hamsection w-[100vw]  bg-mustardyellow p-3  mt-[-1vmin] gap-y-10">
+        <div className="hamBox block lg:hidden text-[4.65vmin] md:text-[2.65vmin]">
+          <div className="flex flex-col hamsection w-[100vw]  bg-mustardyellow p-3  mt-[-1vmin] ">
             <ul>
-              <p>
+              <p className="mt-1">
                 <a
                   href="#about"
                   className="text-black decoration-none"
@@ -124,7 +124,7 @@ const Header = () => {
                   About me
                 </a>
               </p>
-              <p>
+              <p className="mt-1">
                 <a
                   href="#skills"
                   className="text-black decoration-none"
@@ -133,7 +133,7 @@ const Header = () => {
                   Skills
                 </a>
               </p>
-              <p>
+              <p className="mt-1">
                 <a
                   href="#projects"
                   className="text-black decoration-none"
@@ -142,7 +142,7 @@ const Header = () => {
                   Projects
                 </a>
               </p>
-              <p>
+              <p className="mt-1">
                 {" "}
                 <a
                   href="#education"
@@ -152,7 +152,7 @@ const Header = () => {
                   Education
                 </a>
               </p>
-              <p>
+              <p className="mt-1">
                 {" "}
                 <a
                   href="#achievements"
@@ -162,7 +162,7 @@ const Header = () => {
                   Achievements
                 </a>
               </p>
-              <p>
+              <p className="mt-1">
                 {" "}
                 <a
                   href="#experience"

@@ -21,17 +21,27 @@ const Footer = () => {
                 Quick Links
               </li>
               <li className=" text-[4vmin] md:text-[2.75vmin] mt-3 ">
-                About me
+                <a href="#about" className="text-white">
+                  About me
+                </a>
               </li>
               <li className=" text-[4vmin] md:text-[2.75vmin] mt-1">
                 Projects
               </li>
-              <li className=" text-[4vmin] md:text-[2.75vmin] mt-1">Skills</li>
               <li className=" text-[4vmin] md:text-[2.75vmin] mt-1">
-                Education
+                <a href="#skills" className="text-white">
+                  Skills
+                </a>
               </li>
               <li className=" text-[4vmin] md:text-[2.75vmin] mt-1">
-                Experience
+                <a href="#education" className="text-white">
+                  Education
+                </a>
+              </li>
+              <li className=" text-[4vmin] md:text-[2.75vmin] mt-1">
+                <a href="#experience" className="text-white">
+                  Experience
+                </a>
               </li>
             </ul>
           </div>
