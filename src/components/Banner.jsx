@@ -47,7 +47,13 @@ const Banner = () => {
               </p>
               <div className="btnHolder p-2 bg-mustardyellow font-medium flex justify-center  gap-x-3 mt-5 w-[40vw] lg:w-[30vmin]">
                 <img src="./images/resicon.png" height={30} width={30}></img>
-                <button className="  text-black text-lg">My Resume</button>
+                <a
+                  href="https://drive.google.com/file/d/11JTDFpr7XUMi8j2kLKq44pm-JQrfw3p-/view?usp=sharing"
+                  target="_blank"
+                  className="text-black"
+                >
+                  <button className="  text-black text-lg">My Resume</button>
+                </a>
               </div>
 
               <div className="socialsHolder mt-5 lg:mt-16">
@@ -81,7 +87,13 @@ const Banner = () => {
                 </p>
                 <div className="btnHolder p-2 bg-mustardyellow font-medium flex justify-center  gap-x-3 mt-5 w-[60vw] lg:w-[30vmin]">
                   <img src="./images/resicon.png" height={30} width={30}></img>
-                  <button className="  text-black text-lg">My Resume</button>
+                  <a
+                    href="https://drive.google.com/file/d/11JTDFpr7XUMi8j2kLKq44pm-JQrfw3p-/view?usp=sharing"
+                    target="_blank"
+                    className="text-black"
+                  >
+                    <button className="  text-black text-lg">My Resume</button>
+                  </a>
                 </div>
 
                 <div className="socialsHolder mt-5 lg:mt-16">
@@ -114,7 +126,13 @@ const Banner = () => {
                 </p>
                 <div className="btnHolder p-2 bg-mustardyellow font-medium flex justify-center  gap-x-3 mt-5 w-[40vw] lg:w-[30vmin]">
                   <img src="./images/resicon.png" height={40} width={40}></img>
-                  <button className="  text-black text-xl">My Resume</button>
+                  <a
+                    href="https://drive.google.com/file/d/11JTDFpr7XUMi8j2kLKq44pm-JQrfw3p-/view?usp=sharing"
+                    target="_blank"
+                    className="text-black"
+                  >
+                    <button className="  text-black text-lg">My Resume</button>
+                  </a>
                 </div>
 
                 <div className="socialsHolder mt-5 lg:mt-16">
