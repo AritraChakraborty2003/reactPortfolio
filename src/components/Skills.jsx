@@ -5,9 +5,9 @@ const Skills = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://codemap.co.in/skillsAPI.php")
+      .get(`${import.meta.env.VITE_APP_API_URL}` + "skills")
       .then((res) => {
-        setData(res.data.reverse());
+        setData(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -18,7 +18,7 @@ const Skills = () => {
     <>
       <div
         id="skills"
-        className="SkillHolder w-12/12 font-poppins bg-supportBlue p-5 flex flex-col justify-center items-center"
+        className="SkillHolder w-12/12 font-poppins bg-supportBlue p-6 flex flex-col justify-center items-center"
       >
         <div>
           <div className="flex flex-col lg:flex-row lg:gap-x-5">
@@ -43,7 +43,7 @@ const Skills = () => {
                 <div className="cardHolder p-5 w-36 lg:w-52 bg-cardBlue shadow-xl flex flex-col  justify-center text-white font-medium items-center font-sans">
                   <div className="imgHolder h-20 w-20">
                     <img
-                      src={val.image}
+                      src={val.file}
                       className="max-w-full max-h-full object-contain"
                     ></img>
                   </div>
@@ -54,7 +54,7 @@ const Skills = () => {
                   <div className="cardHolder  w-24 lg:w-52 bg-cardBlue shadow-xl flex flex-col  justify-center text-white font-medium items-center font-sans p-5">
                     <div className="imgHolder h-16 w-16">
                       <img
-                        src={val.image}
+                        src={val.file}
                         className="max-w-full max-h-full object-contain"
                       ></img>
                     </div>

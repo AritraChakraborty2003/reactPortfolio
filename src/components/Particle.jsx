@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import Particles from "react-particles";
+import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; //
 const Particle = () => {

@@ -5,7 +5,7 @@ const AboutSec = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://codemap.co.in/detailsAPI.php")
+      .get(`${import.meta.env.VITE_APP_API_URL}` + "about")
       .then((res) => {
         setData(res.data.reverse());
       })
@@ -33,22 +33,22 @@ const AboutSec = () => {
           {data.map((val) => (
             <>
               <div className="leftPart p-5 w-[100vw] lg:w-[40vw] flex justify-center lg:items-center ">
-                <div className="leftPart h-[65vmin] w-[85vmin]  lg:h-[54vmin]  lg:w-[95vmin] flex justify-center items-center ">
+                <div className="leftPart h-[65vmin] w-[85vmin]  lg:h-[49vmin]  lg:w-[86vmin] flex justify-center items-center ">
                   <img
                     src={val.image}
                     className="max-w-full max-h-full object-contain "
                   />
                 </div>
               </div>
-              <div className="rightPart p-5 w-[100vw] lg:w-[50vw] flex flex-col justify-start mt-5  ">
-                <p className="text-[4vmin] md:text-[2.45vmin] font-medium">
+              <div className="rightPart p-5 w-[100vw] lg:w-[50vw] flex flex-col justify-start lg:mt-5  ">
+                <p className="text-[5vmin] md:text-[2.45vmin] font-medium">
                   Name:{" "}
-                  <span className="text-[4vmin] md:text-[2.45vmin] font-bold">
+                  <span className="text-[5vmin] md:text-[2.45vmin] font-bold">
                     {val.name}
                   </span>
                 </p>
                 <p className="text-[4vmin] md:text-[2.45vmin] mt-1 text-supportBlue font-bold font-poppins">
-                  {val.desig}
+                  {val.designation}
                 </p>
                 <p className="mt-2 text-[4vmin] md:text-[2.45vmin] font-normal ">
                   {val.descr}

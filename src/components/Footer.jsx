@@ -3,14 +3,14 @@ const Footer = () => {
   return (
     <>
       <div className="bg-darkwhite">
-        <div className="font-roboto footer w-12/12 bg-darkBlue p-5 flex flex-wrap">
+        <div className=" font-roboto footer w-12/12 bg-darkBlue p-5 flex flex-wrap">
           <div className="w-[100vw] lg:w-1/3 pb-3 flex flex-col justify-center   text-white">
             <p className="text-[6vmin] md:text-[3.45vmin] font-bold pb-2 font-poppins">
               Aritra's Portfolio
             </p>
             <p className="mt-1 text-md md:text-[2.75vmin]">
               Thank you for visiting my personal portfolio website.Please feel
-              free to suggest me if any change is nedded in design of the
+              free to suggest me if any change is needed in design of the
               website at my email address provided.Connect with me over socials.
               Keep Rising 🚀.
             </p>

@@ -9,7 +9,7 @@ const Projects = () => {
   var cnt = 0;
   useEffect(() => {
     axios
-      .get("https://codemap.co.in/projectsAPI.php")
+      .get(`${import.meta.env.VITE_APP_API_URL}` + "projects")
       .then((res) => {
         setData(res.data);
       })
@@ -43,7 +43,7 @@ const Projects = () => {
           <div
             className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"
             style={{
-              backgroundImage: `url(${val.pimage})`,
+              backgroundImage: `url("${val.pimage}")`,
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
             }}

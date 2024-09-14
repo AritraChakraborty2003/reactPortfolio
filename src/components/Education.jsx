@@ -6,7 +6,7 @@ const Education = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://codemap.co.in/educationAPI.php")
+      .get(`${import.meta.env.VITE_APP_API_URL}` + "education")
       .then((res) => {
         setData(res.data);
       })

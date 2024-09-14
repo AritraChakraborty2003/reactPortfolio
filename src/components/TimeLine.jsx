@@ -12,7 +12,7 @@ const TimeLine = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://codemap.co.in/experienceAPI.php")
+      .get(`${import.meta.env.VITE_APP_API_URL}` + "experience")
       .then((res) => {
         setData(res.data);
       })

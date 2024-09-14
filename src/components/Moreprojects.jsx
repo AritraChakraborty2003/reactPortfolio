@@ -14,7 +14,7 @@ const Moreprojects = () => {
   const data = location.state;
   function handleChange(x) {
     setFilterVal(x);
-    const dataFilter = data.filter((val) => val.techstack === x);
+    const dataFilter = data.filter((val) => val.ptechStack === x);
     setFilteredProduct(dataFilter);
   }
 
@@ -412,7 +412,7 @@ const Moreprojects = () => {
               <div
                 className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"
                 style={{
-                  backgroundImage: `url(${val.pimage})`,
+                  backgroundImage: `url("${val.pimage}")`,
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
                 }}
@@ -481,7 +481,7 @@ const Moreprojects = () => {
                 <div
                   className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"
                   style={{
-                    backgroundImage: `url(${val.pimage})`,
+                    backgroundImage: `url("${val.pimage}")`,
                     backgroundSize: "contain",
                     backgroundRepeat: "no-repeat",
                   }}
