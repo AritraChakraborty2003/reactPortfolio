@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { RESUME_URL } from "../Utils/Constants.js";
 const AboutSec = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -16,7 +17,10 @@ const AboutSec = () => {
   console.log(data);
   return (
     <>
-      <div id="about" className="aboutArea w-[100vw] bg-darkwhite pb-10 pt-5">
+      <div
+        id="about"
+        className="aboutArea w-[100vw] bg-darkwhite pb-10 mt-10 pt-3"
+      >
         <div className="header p-5 pt-2   flex  gap-x-3 justify-center h-27">
           <div className="imgHolder p-2  w-16 flex justify-center items-center h-12/12">
             <img
@@ -82,7 +86,7 @@ const AboutSec = () => {
                   <img src="./images/resicon.png" height={30} width={30}></img>
                   <button className="  text-black text-xl">
                     <a
-                      href={val.resumeLink}
+                      href={RESUME_URL}
                       className="text-black text-xl"
                       target="_blank"
                     >

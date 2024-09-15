@@ -77,7 +77,7 @@ const Achieve1 = () => {
     },
   ];
   return (
-    <div className="rightPart w-[100vw] lg:w-[70vmin]  2xl:w-[90vmin] flex justify-center items-center">
+    <div className="rightPart w-[100vw] lg:w-[90vmin]  2xl:w-[90vmin] flex justify-center items-center">
       {(data.length > 0 && (
         <div className=" w-[100vw] lg:w-[100vmin] pl-7 pr-7 flex flex-col gap-y-5">
           {data.slice(0, 3).map((val) => (

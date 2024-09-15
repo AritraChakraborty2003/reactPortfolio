@@ -2,6 +2,7 @@
 import Particle from "./Particle";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import "./overflow.css";
+import { RESUME_URL } from "../Utils/Constants.js";
 import Bannersocials from "./Bannersocials";
 
 const Banner = () => {
@@ -21,7 +22,7 @@ const Banner = () => {
     <>
       <Particle />
 
-      <div className="bannerHolder lg:h-[100vh] w-[100vw] text-white flex flex-wrap-reverse  ">
+      <div className="bannerHolder lg:h-[100vh] w-[100vw] text-white flex flex-wrap-reverse overflow-hidden">
         {(screen.width >= 750 && screen.width <= 950 && (
           <div className="flex  justify-center lg:items-center leftPart w-[100vw] lg:w-[55vw] p-5 ">
             <div className="flex flex-col  lg:justify-center lg:items-center  bannerTextholder text-white font-poppins w-[95vw] lg:w-[100vmin]   ">
@@ -47,11 +48,7 @@ const Banner = () => {
               </p>
               <div className="btnHolder p-2 bg-mustardyellow font-medium flex justify-center  gap-x-3 mt-5 w-[40vw] lg:w-[30vmin]">
                 <img src="./images/resicon.png" height={30} width={30}></img>
-                <a
-                  href="https://drive.google.com/file/d/11JTDFpr7XUMi8j2kLKq44pm-JQrfw3p-/view?usp=sharing"
-                  target="_blank"
-                  className="text-black"
-                >
+                <a href={RESUME_URL} target="_blank" className="text-black">
                   <button className="  text-black text-lg ">My Resume</button>
                 </a>
               </div>
@@ -63,18 +60,18 @@ const Banner = () => {
           </div>
         )) ||
           (screen.width <= 1700 && (
-            <div className="flex  justify-center lg:items-center leftPart w-[100vw] lg:w-[55vw] p-5 ">
+            <div className="flex  justify-center lg:items-center leftPart w-[100vw] lg:w-[55vw] overflow-y-hidden ">
               <div className="flex flex-col  lg:justify-center lg:items-center  bannerTextholder text-white font-poppins w-[95vw] lg:w-[100vmin]   ">
-                <p className="text-4xl lg:text-7xl font-medium overflow-y-hidden">
+                <p className="text-4xl lg:text-7xl font-medium  mt-4 overflow-y-hidden">
                   Hey Guest,
                 </p>
-                <p className="text-3xl lg:text-5xl font-medium overflow-y-hidden mt-3">
+                <p className="text-[7vmin] lg:text-5xl font-medium overflow-y-hidden mt-3">
                   I'm Aritra{" "}
                   <span className="text-mustardyellow font-bold">
                     Chakraborty
                   </span>
                 </p>
-                <p className="mt-5 text-2xl lg:text-4xl font-oxygen font-medium pb-2">
+                <p className="mt-5 text-[6vmin] lg:text-4xl font-oxygen font-medium pb-2">
                   I like{" "}
                   <span style={{ color: "yellow", fontWeight: "bold" }}>
                     {" "}
@@ -87,16 +84,12 @@ const Banner = () => {
                 </p>
                 <div className="btnHolder p-2 bg-mustardyellow font-medium flex justify-center  gap-x-3 mt-5 w-[60vw] lg:w-[30vmin]">
                   <img src="./images/resicon.png" height={30} width={30}></img>
-                  <a
-                    href="https://drive.google.com/file/d/11JTDFpr7XUMi8j2kLKq44pm-JQrfw3p-/view?usp=sharing"
-                    target="_blank"
-                    className="text-black"
-                  >
+                  <a href={RESUME_URL} target="_blank" className="text-black">
                     <button className="  text-black text-lg">My Resume</button>
                   </a>
                 </div>
 
-                <div className="socialsHolder mt-5 lg:mt-16">
+                <div className="socialsHolder mt-3 lg:mt-16">
                   <Bannersocials />
                 </div>
               </div>
@@ -126,18 +119,14 @@ const Banner = () => {
                 </p>
                 <div className="btnHolder p-2 bg-mustardyellow font-medium flex justify-center  gap-x-3 mt-5 w-[40vw] lg:w-[30vmin]">
                   <img src="./images/resicon.png" height={40} width={40}></img>
-                  <a
-                    href="https://drive.google.com/file/d/11JTDFpr7XUMi8j2kLKq44pm-JQrfw3p-/view?usp=sharing"
-                    target="_blank"
-                    className="text-black"
-                  >
+                  <a href={RESUME_URL} target="_blank" className="text-black">
                     <button className="  text-black text-lg mt-[0.5vmin]">
                       My Resume
                     </button>
                   </a>
                 </div>
 
-                <div className="socialsHolder mt-5 lg:mt-16">
+                <div className="socialsHolder mt-2 lg:mt-16">
                   <Bannersocials />
                 </div>
               </div>
