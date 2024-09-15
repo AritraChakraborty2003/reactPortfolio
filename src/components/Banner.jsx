@@ -52,7 +52,7 @@ const Banner = () => {
                   target="_blank"
                   className="text-black"
                 >
-                  <button className="  text-black text-lg">My Resume</button>
+                  <button className="  text-black text-lg ">My Resume</button>
                 </a>
               </div>
 
@@ -131,7 +131,9 @@ const Banner = () => {
                     target="_blank"
                     className="text-black"
                   >
-                    <button className="  text-black text-lg">My Resume</button>
+                    <button className="  text-black text-lg mt-[0.5vmin]">
+                      My Resume
+                    </button>
                   </a>
                 </div>
 
@@ -155,10 +157,10 @@ const Banner = () => {
           </div>
         )) || (
           <div className="flex  lg:items-center rightPart w-[100vw] lg:w-[45vw] ">
-            <div className="flex ml-[1vmin] 2xl:ml-[10vmin] justify-center items-center imgHolder h-[56vmin] w-[56vmin] rounded-ext1 bg-mustardyellow">
-              <div className="imgHolder h-[50vmin] w-[50vmin]">
+            <div className="flex ml-[1vmin] 2xl:ml-[10vmin] justify-center items-center imgHolder h-[66vmin] w-[66vmin] rounded-[33vmin] bg-mustardyellow">
+              <div className="imgHolder h-[65vmin] w-[65vmin] flex justify-center items-center">
                 <img
-                  src="./images/cartoonFace.png"
+                  src="./images/cartoonFace1.png"
                   className="max-w-full max-h-full object-contain"
                 ></img>
               </div>

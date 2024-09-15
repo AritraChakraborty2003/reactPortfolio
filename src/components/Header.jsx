@@ -10,7 +10,7 @@ const Header = () => {
       <div className="  bg-mustardyellow p-2 flex">
         <div className="logoHolder flex gap-x-3 lg:gap-x-6 lg:w-[25%]">
           <img src="./images/cartoonFace.png" height={50} width={50}></img>
-          <p className="mt-3 font-bold text-[4.5vmin] md:text-[3vmin] font-oxygen">
+          <p className="mt-3 font-bold text-[4.5vmin] md:text-[3vmin] 2xl:text-[2.45vmin] font-oxygen">
             Aritra's Portfolio
           </p>
         </div>

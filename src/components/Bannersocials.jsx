@@ -47,13 +47,13 @@ const Bannersocials = () => {
             ))}
           </div>
         )) || (
-          <div className="socialHolder flex gap-x-10">
+          <div className="socialHolder flex gap-x-14">
             {data.map((val) => (
               <a href={val.link} target="_blank">
                 {val.type === "Leetcode" ? (
-                  <img src={val.file} height={70} width={70}></img>
-                ) : (
                   <img src={val.file} height={65} width={65}></img>
+                ) : (
+                  <img src={val.file} height={75} width={75}></img>
                 )}
               </a>
             ))}

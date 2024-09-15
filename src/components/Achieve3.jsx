@@ -80,12 +80,11 @@ const Achieve3 = () => {
   return (
     <div className="rightPart w-[100vw] lg:w-[70vmin]  2xl:w-[90vmin] flex justify-center items-center">
       {(data.length > 0 && (
-        <div className=" w-[100vw] lg:w-[70vmin]  2xl:w-[90vmin]  p-2 lg:mt-16">
+        <div className=" w-[100vw] lg:w-[70vmin]  2xl:w-[94vmin]  pl-7 pr-7 flex flex-col gap-y-5 ">
           {data.slice(6, 9).map((val) => (
             <ul className="mt-1">
-              <li className="text-xl lg:text-[3.25vmin] pt-2 pb-2">
-                {val.id}. Won in <b>{val.name}</b> with rank <b>{val.rank}</b>{" "}
-                the{" "}
+              <li className="text-xl lg:text-[3vmin] pt-2 pb-2">
+                {val.id}. Won <b>{val.name}</b> with rank <b>{val.rank}</b> the{" "}
                 <a href={val.certificateLink} target="_blank">
                   <u>
                     <b>certificate Link</b>
@@ -97,7 +96,7 @@ const Achieve3 = () => {
               </li>
             </ul>
           ))}
-          <div className="flex linkHolder gap-x-2 mt-10 w-12/12 justify-center">
+          <div className="flex linkHolder gap-x-2 mt-10 w-12/12 justify-center pb-5">
             <div className="box rounded-[1vmin] h-[2vmin] w-[2vmin] border-solid border-2 "></div>
             <div className="box rounded-[1vmin] h-[2vmin] w-[2vmin] border-solid border-2"></div>
             <div className="box rounded-[1vmin] h-[2vmin] w-[2vmin] border-solid border-2 bg-black"></div>

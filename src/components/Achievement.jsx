@@ -13,16 +13,16 @@ const Achievement = () => {
     const interval = setInterval(() => {
       const cnt = (count + 1) % 3;
       setCount(cnt);
-    }, 4000);
+    }, 4500);
 
     //Clearing the interval
     return () => clearInterval(interval);
   }, [count]);
   return (
-    <div className="lg:pt-10 bg-darkwhite">
+    <div className="pt-10 bg-darkwhite pb-8">
       <div id="achievements" className="aboutArea w-[100vw] bg-darkwhite p-3 ">
         <div className="header   flex  gap-x-3 justify-center">
-          <div className="imgHolder w-16 flex justify-center items-center h-12/12">
+          <div className="imgHolder w-16 flex justify-center items-center ">
             <img
               src="./images/band.png"
               className="max-w-full max-h-full object-contain"
@@ -32,18 +32,25 @@ const Achievement = () => {
             <span className="text-supportBlue ">Achievements</span>
           </p>
         </div>
-        <div id="mainbox" className="flex flex-wrap justify-center">
-          <div className="leftPart w-[100vw] lg:w-[76vmin]  2xl:w-[80vmin]  flex justify-center items-center">
-            <div>
-              <img
-                src="./images/achieve.png"
-                className="w-[76vmin] h-[57vmin] lg:mt-7"
-              ></img>
+        <div className="flex justify-center items-center mt-3 pb-5">
+          <div
+            id="mainbox"
+            className=" bg-white  lg:w-[77vw] flex  flex-col justify-center items-center rounded-[4vmin]"
+          >
+            <div className="leftPart w-[100vw]  lg:w-[76vmin]  2xl:w-[80vmin]  flex justify-center items-center">
+              <div className="w-[35vmin] h-[35vmin] lg:w-[28vmin] lg:h-[28vmin] flex justify-center items-center">
+                <img
+                  src="./images/achieve.png"
+                  className="max-w-full max-h-full object-contain"
+                ></img>
+              </div>
+            </div>
+            <div className="mt-[-3vmin] lg:mt-[-2.5vmin]">
+              {count == 1 && <Achieve1 />}
+              {count == 2 && <Achieve2 />}
+              {count == 0 && <Achieve3 />}
             </div>
           </div>
-          {count == 1 && <Achieve1 />}
-          {count == 2 && <Achieve2 />}
-          {count == 0 && <Achieve3 />}
         </div>
       </div>
     </div>

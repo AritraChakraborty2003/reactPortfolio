@@ -33,7 +33,7 @@ const Moreprojects = () => {
         <div className="mt-3 boxHolder pb-3 flex-wrap pt-1 w-screen text-white flex justify-center items-center gap-x-4 gap-y-2">
           <div
             id="btn"
-            className="boxHolder h-10 border-white border-2 w-24 md:w-24  flex justify-center items-center"
+            className="boxHolder h-10 border-white border-2 w-24 md:w-24  flex justify-center items-center "
             onMouseEnter={() => {
               document.getElementById("btn").style.backgroundColor = "white";
               document.getElementById("btn").style.color = "black";
@@ -407,7 +407,7 @@ const Moreprojects = () => {
           </div>
         </div>
         {(filteredProduct.length === 0 && filterVal === "" && (
-          <div className="projectsHolder w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-10">
+          <div className="projectsHolder mt-5 w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-10">
             {data.map((val, idx) => (
               <div
                 className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"

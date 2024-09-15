@@ -41,7 +41,7 @@ const Projects = () => {
       <div className="projectsHolder w-screen p-5 flex justify-center items-center flex-wrap gap-y-4 gap-x-10">
         {data.slice(0, 6).map((val, idx) => (
           <div
-            className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] border-cardBlue border-4 flex items-end"
+            className="projectsBox h-[60vmin]  w-[99vw] md:h-[37vmin] md:w-[64vmin] 2xl:w-[60vmin] border-cardBlue border-4 flex items-end"
             style={{
               backgroundImage: `url("${val.pimage}")`,
               backgroundSize: "contain",
