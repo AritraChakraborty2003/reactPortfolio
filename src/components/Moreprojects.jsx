@@ -295,10 +295,10 @@ const Moreprojects = () => {
               }}
               className="boxHolder h-10 border-white border-2  pl-2 pr-2"
               onClick={() => {
-                handleChange("react.js+Firebase");
+                handleChange("react.js+AppWrite");
               }}
             >
-              <p className="mt-1">react.js + Firebase</p>
+              <p className="mt-1">react.js + AppWrite</p>
             </div>
             <div
               id="btn7"
